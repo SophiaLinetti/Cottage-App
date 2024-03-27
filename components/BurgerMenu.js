@@ -20,15 +20,19 @@ export default function BurgerMenu() {
         setIsOpen(!isOpen);
     }
 
+    function handleClickedLink() {
+        setIsOpen(false)
+    }
+
     return(
         <>
         <MenuIcon onClick={toggleMenu}>☰</MenuIcon>
         <MenuLinks isOpen={isOpen}>
-            <Link href="/">Home</Link>
-            <Link href="/cottage-talk">Cottage Talk</Link>
-            <Link href="/recommendations">Recommendations</Link>
-            <Link href="/feedback">Tips & Tops</Link>
-            <Link href="/contact">Contact</Link>
+            <Link onClick={handleClickedLink} href="/">Home</Link>
+            <Link onClick={handleClickedLink} href="/cottage-talk">Cottage Talk</Link>
+            <Link onClick={handleClickedLink} href="/recommendations">Recommendations</Link>
+            <Link onClick={handleClickedLink} href="/feedback">Tips & Tops</Link>
+            <Link onClick={handleClickedLink} href="/contact">Contact</Link>
         </MenuLinks>
         </>
     )
