@@ -15,7 +15,7 @@ const MenuIcon = styled.button`
 `;
 
 const MenuLinks = styled.ul`
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   flex-direction: column;
   padding: 0;
   position: absolute;
@@ -55,7 +55,7 @@ export default function BurgerMenu() {
     return(
         <Container>
       <MenuIcon onClick={toggleMenu}>☰</MenuIcon>
-      <MenuLinks isOpen={isOpen}>
+      <MenuLinks $isOpen={isOpen}>
 
         <MenuItem onClick={closeMenu}>
             <StyledLink href="/">Home</StyledLink>
