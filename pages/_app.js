@@ -1,11 +1,11 @@
-import BurgerMenu from "@/components/BurgerMenu";
+import Navbar from "@/components/Navbar";
 import GlobalStyle from "../styles";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <BurgerMenu/>
+      <Navbar/>
       <Component {...pageProps} />
     </>
   );
