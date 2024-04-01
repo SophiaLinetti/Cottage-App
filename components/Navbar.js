@@ -8,12 +8,6 @@ display: flex;
 align-items: center;
 `;
 
-const Heading = styled.h1`
-margin-left: 10px;
-/* margin-top: 0; */
-
-`;
-
 const MenuIcon = styled.button`
   background: none;
   border: none;
@@ -28,7 +22,7 @@ const MenuIcon = styled.button`
   }
 `;
 
-const MenuLinks = styled.ul`
+const MenuList = styled.ul`
   display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   flex-direction: column;
   padding-top: 0;
@@ -86,8 +80,7 @@ text-align: center;
 }
 `;
 
-const Home = styled(Link)`
-  padding: 8px;
+const NavTitel = styled(Link)`
   text-decoration: none;
   color: black;
 `;
@@ -105,11 +98,11 @@ export default function Navbar() {
 
     return(
         <Container>
-          <Heading>
-          <Home href="/">Meergefühl</Home>
-          </Heading>
+          <h1>
+          <NavTitel href="/">Meergefühl</NavTitel>
+          </h1>
       <MenuIcon onClick={toggleMenu}>{isOpen ? 'x' : '☰'}</MenuIcon>
-      <MenuLinks $isOpen={isOpen}>
+      <MenuList $isOpen={isOpen}>
 
         <MenuItem onClick={closeMenu}>
             <StyledLink href="/cottage-talk">cottage talk.</StyledLink>
@@ -127,7 +120,7 @@ export default function Navbar() {
             <StyledLink href="/contact">contact.</StyledLink>
         </MenuItem>
 
-      </MenuLinks>
+      </MenuList>
     </Container>
     )
 }
