@@ -18,14 +18,14 @@ const NavTitle = styled(Link)`
 `;
 
 const MenuList = styled.ul`
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
-  height: ${({ isOpen }) => (isOpen ? '100vh' : 'none')};
-  width: ${({ isOpen }) => (isOpen ? '100%' : 'none')};
-  justify-content: ${({ isOpen }) => (isOpen ? 'space-evenly' : 'none')};
+  height: ${({ $isOpen }) => ($isOpen ? '100vh' : 'none')};
+  width: ${({ $isOpen }) => ($isOpen ? '100%' : 'none')};
+  justify-content: ${({ $isOpen }) => ($isOpen ? 'space-evenly' : 'none')};
   background-color: rgba(255, 255, 255, 0.2); // For a semi-transparent background
   backdrop-filter: blur(10px);
   z-index: 2;
@@ -91,7 +91,7 @@ export default function Navbar() {
           <NavTitle href="/">Meergefühl</NavTitle>
           </h1>
       <MenuIcon onClick={toggleMenu}>{isOpen ? 'x' : '☰'}</MenuIcon>
-      <MenuList isOpen={isOpen}>
+      <MenuList $isOpen={isOpen}>
 
         <MenuItem onClick={closeMenu}>
             <StyledLink href="/cottage-talk">cottage talk.</StyledLink>
