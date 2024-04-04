@@ -82,7 +82,7 @@ export default function Navbar() {
     }
 
     function closeMenu() {
-        setIsOpen(false)
+      setIsOpen(false)
     }
 
     return(
