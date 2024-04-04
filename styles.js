@@ -11,7 +11,6 @@ export default createGlobalStyle`
 
   body {
     font-family: system-ui;
-    background-color: hotpink;
-   
+    background-color: #FAF5F0;
   }
 `;
