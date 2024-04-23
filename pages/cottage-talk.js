@@ -18,8 +18,10 @@ export default function CottageTalk() {
       <PostForm onSubmit={handleNewPost} />
       {posts.map(post => (
         <article key={post.id}>
-          <h5>{post.author}</h5>
-          <p>{post.date}</p>
+          <header>
+            <h4>{post.author}</h4>
+            <time>{post.date}</time>
+          </header>
           <p>{post.comment}</p>
         </article>
       ))}
