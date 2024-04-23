@@ -24,7 +24,7 @@ export default function PostForm({ onSubmit }) {
         name="author"
         value={post.author}
         onChange={handleChange}
-        placeholder="Autor"
+        placeholder="Name"
         required
       />
       <input
@@ -38,7 +38,7 @@ export default function PostForm({ onSubmit }) {
         name="comment"
         value={post.comment}
         onChange={handleChange}
-        placeholder="comment"
+        placeholder="write something..."
         required
       />
       <button type="submit">Posten</button>
