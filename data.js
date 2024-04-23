@@ -1,5 +1,5 @@
 
-export default const testimonials = {
+ const testimonials = {
     cottageTalk: [
         {
             id: 1,
@@ -42,5 +42,6 @@ export default const testimonials = {
             comment: "Der Hundestrand in der nähe ist ein Muss für jeden Gast (mit Hund)!"
         }
     ]
-  };
+ };
   
+export default testimonials;
